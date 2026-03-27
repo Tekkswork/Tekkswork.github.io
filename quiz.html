@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - BleikerQuizzen</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="img/Skjermbilde 2026-03-24 215512.png" alt="BleikerQuizzen logo">
+      </a>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="navbar-links">
+        <a href="index.html">HJEM</a>
+        <a href="grafisk-profil.html">GRAFISK PROFIL</a>
+        <a href="quiz.html" class="active">QUIZ</a>
+        <a href="some.html" class="no-uppercase">SoMe</a>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">HJEM</a>
+      <a href="grafisk-profil.html">GRAFISK PROFIL</a>
+      <a href="quiz.html">QUIZ</a>
+      <a href="some.html" class="no-uppercase">SoMe</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section">
+      <div class="quiz-container">
+        <h1 class="page-title">BleikerQuizzen</h1>
+
+        <!-- Quiz aktiv -->
+        <div id="quizBox" class="quiz-box">
+          <p class="small-text" id="questionCount"></p>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p class="small-text" id="scoreDisplay"></p>
+          <h2 class="quiz-question" id="questionText"></h2>
+          <div class="quiz-options" id="optionsContainer"></div>
+          <div id="feedbackContainer"></div>
+          <button class="btn-primary hidden" id="nextBtn" onclick="nextQuestion()">Neste Spørsmål</button>
+        </div>
+
+        <!-- Resultat -->
+        <div id="resultBox" class="quiz-box quiz-result hidden">
+          <h2>Quiz Ferdig!</h2>
+          <p class="quiz-score">Du fikk <span id="finalScore"></span> av <span id="finalTotal"></span> riktige!</p>
+
+          <div id="nameInput" class="highscore-input">
+            <p class="small-text" style="margin-bottom: 12px;">Skriv inn navnet ditt for highscore-listen:</p>
+            <input type="text" id="playerName" placeholder="Ditt navn">
+            <button class="btn-primary" onclick="saveName()">Lagre</button>
+          </div>
+          <p id="savedMsg" class="saved-msg hidden">Poengsum lagret!</p>
+
+          <div class="highscore-list">
+            <h3>🏆 Highscore (Topp 5)</h3>
+            <div id="highscoreList"></div>
+          </div>
+
+          <button class="btn-accent" onclick="restartQuiz()">Ta Quizzen Igjen</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-label">Laget av</p>
+        <p class="footer-text">Hadidja</p>
+      </div>
+      <a href="index.html" class="footer-logo">
+        <img src="img/Skjermbilde 2026-03-24 215512.png" alt="BleikerQuizzen logo">
+      </a>
+      <div class="footer-right">
+        <p class="footer-label">Kontakt</p>
+        <p class="footer-text">Bleiker videregående skole</p>
+        <p class="footer-text">hadidjag@afk.no</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
