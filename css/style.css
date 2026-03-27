@@ -30,7 +30,6 @@ body {
   flex-direction: column;
 }
 
-/* Nav husk */
 .navbar {
   background: var(--primary);
   color: var(--primary-foreground);
@@ -122,7 +121,6 @@ body {
   }
 }
 
-/* ===== HERO SECTION ===== */
 .hero {
   background: var(--primary);
   color: var(--primary-foreground);
@@ -148,7 +146,6 @@ body {
   opacity: 0.9;
 }
 
-/* knapp */
 .btn-primary {
   display: inline-block;
   background: var(--primary);
@@ -189,7 +186,6 @@ body {
   opacity: 0.9;
 }
 
-/* seksjon */
 .section {
   padding: 64px 24px;
 }
@@ -217,7 +213,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* footer */
 .footer {
   background: var(--primary);
   color: var(--primary-foreground);
@@ -271,7 +266,6 @@ body {
   height: 64px;
 }
 
-/* grafisk profil */
 .page-title {
   font-family: var(--font-heading);
   font-size: 2.25rem;
@@ -366,7 +360,21 @@ body {
   font-size: 1.125rem;
 }
 
-/* quiz */
+.pdf-download {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pdf-download-btn {
+  min-width: 260px;
+}
+
+.pdf-download-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
 .quiz-container {
   max-width: 672px;
   margin: 0 auto;
@@ -517,6 +525,7 @@ body {
   margin-bottom: 8px;
 }
 
+
 .highscore-entry .name {
   font-family: var(--font-heading);
 }
@@ -537,9 +546,21 @@ body {
   color: var(--muted-foreground);
 }
 
-/* some : ikke juster */
 .some-video {
   width: min(100%, 520px);
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.videoinnslag-page {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.videoinnslag-video {
+  width: min(100%, 920px);
   border-radius: 8px;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }

@@ -5,8 +5,6 @@ function toggleMenu() {
     menu.classList.toggle("open");
   }
 }
-
-// Quiz
 var questions = [
   {
     question: "Hva brukes en dreiebenk til?",
@@ -74,6 +72,7 @@ var selectedAnswer = null;
 function initQuiz() {
   var quizBox = document.getElementById("quizBox");
   if (!quizBox) return;
+
   showQuestion();
 }
 
@@ -273,7 +272,42 @@ function restartQuiz() {
   showQuestion();
 }
 
-// Start quiz når siden lastes
+function downloadGrafiskProfilPdf() {
+  var button = document.getElementById("downloadPdfBtn");
+  var content = document.getElementById("grafiskProfilInnhold");
+
+  if (!button || !content || typeof window.html2pdf !== "function") {
+    return;
+  }
+
+  var originalText = button.textContent;
+  button.disabled = true;
+  button.textContent = "LAGER PDF...";
+
+  window.html2pdf().set({
+    margin: 10,
+    filename: "BleikerQuizzen-Grafisk-Profil.pdf",
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+  }).from(content).save().catch(function () {
+    window.alert("Kunne ikke laste ned PDF akkurat nå.");
+  }).finally(function () {
+    button.disabled = false;
+    button.textContent = originalText;
+  });
+}
+
+function initPdfDownload() {
+  var button = document.getElementById("downloadPdfBtn");
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener("click", downloadGrafiskProfilPdf);
+}
 document.addEventListener("DOMContentLoaded", function () {
   initQuiz();
+  initPdfDownload();
 });

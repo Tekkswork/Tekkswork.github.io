@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="navbar-logo">
@@ -19,6 +17,7 @@
         <a href="index.html">HJEM</a>
         <a href="grafisk-profil.html" class="active">GRAFISK PROFIL</a>
         <a href="quiz.html">QUIZ</a>
+        <a href="videoinnslag.html">VIDEOINNSLAG</a>
         <a href="some.html" class="no-uppercase">SoMe</a>
       </div>
     </div>
@@ -26,22 +25,21 @@
       <a href="index.html">HJEM</a>
       <a href="grafisk-profil.html">GRAFISK PROFIL</a>
       <a href="quiz.html">QUIZ</a>
+      <a href="videoinnslag.html">VIDEOINNSLAG</a>
       <a href="some.html" class="no-uppercase">SoMe</a>
     </div>
   </nav>
 
   <main>
     <section class="section">
-      <div class="section-inner" style="text-align: left;">
+      <div class="section-inner" id="grafiskProfilInnhold" style="text-align: left;">
         <h1 class="page-title">Grafisk Profil</h1>
 
-        <!-- Logo -->
         <h2 class="gp-section-title">Logo</h2>
         <div class="gp-logo-box">
           <img src="img/BLEIKER_LOGO_NY.png" alt="BleikerQuizzen logo">
         </div>
 
-        <!-- Fargepalett -->
         <h2 class="gp-section-title">Fargepalett</h2>
         <div class="color-grid">
           <div class="color-card">
@@ -73,7 +71,6 @@
           </div>
         </div>
 
-        <!-- Typografi -->
         <h2 class="gp-section-title">Typografi</h2>
         <div class="typo-box">
           <p class="typo-label">Logo & Headinger</p>
@@ -81,11 +78,14 @@
           <p class="typo-label">Brødtekst</p>
           <p class="typo-body">Baskerville Old Face / Libre Baskerville</p>
         </div>
+
+        <div class="pdf-download">
+          <button class="btn-primary pdf-download-btn" id="downloadPdfBtn" type="button">LAST NED SOM PDF</button>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-left">
@@ -103,6 +103,7 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
