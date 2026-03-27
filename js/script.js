@@ -60,7 +60,7 @@ var questions = [
     question: "Se på videoen, hvilken er riktig?",
     options: ["A", "B", "C"],
     correct: 1,
-    videoSrc: "img/MicrosoftTeams-video (14).mp4",
+    videoSrc: "img/MicrosoftTeams-video (16).mp4",
     keepOptionOrder: true
   }
 ];
@@ -73,7 +73,7 @@ function initQuiz() {
   var quizBox = document.getElementById("quizBox");
   if (!quizBox) return;
 
-  showQuestion();
+  showQuestion(); 
 }
 
 function getShuffledIndices(length) {
